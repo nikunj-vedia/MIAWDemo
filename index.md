@@ -1,4 +1,4 @@
-<html>
+<html title="Salesforce MIAW Live Chat Demo>
 	<head>
 		<meta name="viewport" content="img-src 'self' width=device-width, initial-scale=1, minimum-scale=1">
 	</head>
