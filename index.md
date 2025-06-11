@@ -1,4 +1,7 @@
 <html>
+	<head>
+		<meta http-equiv="Content-Security-Policy" content="img-src 'self' data: blob: https://kaplaninternational--nikunjdev.sandbox.my.salesforce.com https://kaplaninternational--nikunjdev.sandbox.file.force.com https://img.youtube.com https://i.ytimg.com https://i.vimeocdn.com https://login.salesforce.com/icons/ https://payments.salesforce.com/icons/ https://cdn.content.aws-prod1-useast1.aws.sfdc.cl/icons/ https://cdn.content.aws-dev2-uswest2.aws.sfdc.cl/icons/ https://*.adyen.com https://www.sandbox.paypal.com https://www.paypal.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://swe132s.sfdc-cehfhs.salesforce.com/icons/ https://*.clmfed.docusign.com https://*.clm.docusign.mil https://api.mixpanel.com https://*.springcm.com https://content.instrumentation.getconga.com https://data.instrumentation.getconga.com https://composer.congamerge.com https://content.ana https://nikunj-vedia.github.io;">
+	</head>
 <body>
 <script type='text/javascript'>
 	function initEmbeddedMessaging() {
