@@ -6,12 +6,11 @@
 <script type='text/javascript'>
 	function initEmbeddedMessaging() {
 		try {
-			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-			embeddedservice_bootstrap.settings.smallCompanyLogoImgURL = "/images/klogo.jpg";
+			embeddedservice_bootstrap.settings.language = 'en_US';
 			embeddedservice_bootstrap.init(
 				'00Ddu000007a7wb',
-				'Salesforce_MIAW_Demo',
-				'https://kaplaninternational--nikunjdev.sandbox.my.site.com/ESWSalesforceMIAWDemo1749452853283',
+				'MIAW_Live_Chat',
+				'https://kaplaninternational--nikunjdev.sandbox.my.site.com/ESWMIAWLiveChat1749665278872',
 				{
 					scrt2URL: 'https://kaplaninternational--nikunjdev.sandbox.my.salesforce-scrt.com'
 				}
@@ -21,7 +20,8 @@
 		}
 	};
 </script>
-<script type='text/javascript' src='https://kaplaninternational--nikunjdev.sandbox.my.site.com/ESWSalesforceMIAWDemo1749452853283/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-
+	
+<script type='text/javascript' src='https://kaplaninternational--nikunjdev.sandbox.my.site.com/ESWMIAWLiveChat1749665278872/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'>
+</script>
 </body>
 </html>
