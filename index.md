@@ -3,6 +3,7 @@
 		<meta name="viewport" content="img-src 'self' width=device-width, initial-scale=1, minimum-scale=1">
 	</head>
 <body>
+	<h2> Salesforce Messaging for In App and Web Demo </h2>
 <script type='text/javascript'>
 	function initEmbeddedMessaging() {
 		try {
