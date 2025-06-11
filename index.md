@@ -7,7 +7,7 @@
 	function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-
+			embeddedservice_bootstrap.settings.prechatBackgroundImgURL = "https://nikunj-vedia.github.io/MIAWDemo/images/klogo.jpg"
 			embeddedservice_bootstrap.init(
 				'00Ddu000007a7wb',
 				'Salesforce_MIAW_Demo',
