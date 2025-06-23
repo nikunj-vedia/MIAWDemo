@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat Rating</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+    .modal {
+      display: block;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.5);
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 15% auto;
+      padding: 20px;
+      border-radius: 8px;
+      width: 300px;
+      text-align: center;
+    }
+    .thumbs {
+      font-size: 30px;
+      cursor: pointer;
+      margin: 10px;
+    }
+    .textarea-container {
+      display: none;
+      margin-top: 15px;
+    }
+    textarea {
+      width: 100%;
+      height: 80px;
+      resize: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="modal" id="ratingModal">
+  <div class="modal-content">
+    <p>How would you rate this chat?</p>
+    <div>
+      <span class="thumbs" onclick="showFeedback('up')">👍</span>
+      <span class="thumbs" onclick="showFeedback('down')">👎</span>
+    </div>
+    <div class="textarea-container" id="feedbackContainer">
+      <p>Feel free to leave us any additional feedback below:</p>
+      <textarea placeholder="Your feedback..."></textarea>
+    </div>
+  </div>
+</div>
+
+<script>
+  function showFeedback(rating) {
+    document.getElementById('feedbackContainer').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
