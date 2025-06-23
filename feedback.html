@@ -6,7 +6,7 @@
   <title>Chat Rating</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: "Salesforce Sans", Arial, sans-serif;
       margin: 0;
       padding: 0;
       background: #f4f4f4;
@@ -44,6 +44,18 @@
       height: 80px;
       resize: none;
     }
+    button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
   </style>
 </head>
 <body>
@@ -58,6 +70,7 @@
     <div class="textarea-container" id="feedbackContainer">
       <p>Feel free to leave us any additional feedback below:</p>
       <textarea placeholder="Your feedback..."></textarea>
+      <button onclick="submitFeedback()">Submit</button>
     </div>
   </div>
 </div>
@@ -65,6 +78,12 @@
 <script>
   function showFeedback(rating) {
     document.getElementById('feedbackContainer').style.display = 'block';
+  }
+
+  function submitFeedback() {
+    const feedback = document.querySelector('textarea').value;
+    alert("Thank you for your feedback!\n\n" + feedback);
+    document.getElementById('ratingModal').style.display = 'none';
   }
 </script>
 
