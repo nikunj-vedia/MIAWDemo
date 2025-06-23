@@ -72,6 +72,9 @@
       <textarea placeholder="Your feedback..."></textarea>
       <button onclick="submitFeedback()">Submit</button>
     </div>
+    <div class="textarea-container" id="thankyouContainer">
+      <p>Thank you for your feedback!</p>
+    </div>
   </div>
 </div>
 
@@ -84,6 +87,7 @@
     const feedback = document.querySelector('textarea').value;
     console.log("Thank you for your feedback!\n\n" + feedback);
     document.getElementById('ratingModal').style.display = 'none';
+    document.getElementById('thankyouContainer').style.display = 'block';
   }
 </script>
 
