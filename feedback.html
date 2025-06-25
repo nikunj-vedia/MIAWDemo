@@ -12,19 +12,19 @@
       background: #f4f4f4;
     }
     .modal {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: fixed;
       z-index: 1000;
       left: 0;
       top: 0;
       width: 100%;
       height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.5);
+      background-color: rgba(0, 0, 0, 0.5);
     }
     .modal-content {
       background-color: #fff;
-      margin: 15% auto;
       padding: 20px;
       border-radius: 8px;
       width: 300px;
@@ -34,15 +34,19 @@
       font-size: 30px;
       cursor: pointer;
       margin: 10px;
+      user-select: none;
     }
-    .textarea-container {
+    .hidden {
       display: none;
+    }
+    .feedback-textarea {
       margin-top: 15px;
     }
     textarea {
       width: 100%;
       height: 80px;
       resize: none;
+      margin-top: 5px;
     }
     button {
       margin-top: 10px;
@@ -61,33 +65,39 @@
 <body>
 
 <div class="modal" id="ratingModal">
-  <div class="modal-content">
-    <p>How would you rate this chat?</p>
-    <div>
-      <span class="thumbs" onclick="showFeedback('up')">👍</span>
-      <span class="thumbs" onclick="showFeedback('down')">👎</span>
+  <div class="modal-content" id="modalContent">
+    <p id="ratingPrompt">How would you rate this chat?</p>
+    <div id="ratingOptions">
+      <span class="thumbs" onclick="handleRating('up')" role="button" aria-label="Thumbs up">👍</span>
+      <span class="thumbs" onclick="handleRating('down')" role="button" aria-label="Thumbs down">👎</span>
     </div>
-    <div class="textarea-container" id="feedbackContainer">
-      <p>Feel free to leave us any additional feedback below:</p>
-      <textarea placeholder="Your feedback..."></textarea>
+
+    <div class="feedback-textarea hidden" id="feedbackSection">
+      <label for="feedbackInput">Feel free to leave us any additional feedback below:</label>
+      <textarea id="feedbackInput" placeholder="Your feedback..."></textarea>
       <button onclick="submitFeedback()">Submit</button>
     </div>
-    <div class="textarea-container" id="thankyouContainer">
+
+    <div id="thankYouMessage" class="hidden">
       <p>Thank you for your feedback!</p>
     </div>
   </div>
 </div>
 
 <script>
-  function showFeedback(rating) {
-    document.getElementById('feedbackContainer').style.display = 'block';
+  function handleRating(rating) {
+    document.getElementById('feedbackSection').classList.remove('hidden');
   }
 
   function submitFeedback() {
-    const feedback = document.querySelector('textarea').value;
+    const feedback = document.getElementById('feedbackInput').value;
     console.log("Thank you for your feedback!\n\n" + feedback);
-    document.getElementById('ratingModal').style.display = 'none';
-    document.getElementById('thankyouContainer').style.display = 'block';
+
+    // Hide all sections except thank you
+    document.getElementById('ratingPrompt').classList.add('hidden');
+    document.getElementById('ratingOptions').classList.add('hidden');
+    document.getElementById('feedbackSection').classList.add('hidden');
+    document.getElementById('thankYouMessage').classList.remove('hidden');
   }
 </script>
 
