@@ -153,22 +153,25 @@
 
   <!-- Salesforce Embedded Messaging Script -->
   <script type='text/javascript'>
-    function initEmbeddedMessaging() {
-      try {
-        embeddedservice_bootstrap.settings.language = 'en_US';
-        embeddedservice_bootstrap.init(
-          '00Ddu000007a7wb',
-          'MIAW_Live_Chat',
-          'https://kaplaninternational--nikunjdev.sandbox.my.site.com/ESWMIAWLiveChat1749665278872',
-          {
-            scrt2URL: 'https://kaplaninternational--nikunjdev.sandbox.my.salesforce-scrt.com'
-          }
-        );
-      } catch (err) {
-        console.error('Error loading Embedded Messaging: ', err);
-      }
-    };
-  </script>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00DVe000002hXFh',
+				'Kaplan_Pathways_Admission_Messaging_Channel',
+				'https://kaplaninternational--stage.sandbox.my.site.com/ESWKaplanPathwaysAdmiss1754578699645',
+				{
+					scrt2URL: 'https://kaplaninternational--stage.sandbox.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://kaplaninternational--stage.sandbox.my.site.com/ESWKaplanPathwaysAdmiss1754578699645/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
   <script type='text/javascript' src='https://kaplaninternational--nikunjdev.sandbox.my.site.com/ESWMIAWLiveChat1749665278872/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 </body>
 </html>
